@@ -3,8 +3,10 @@
 # and commit this file to your remote git repository to share the goodness with others.
 
 tasks:
+  - before: |
+      rvm install "2.7.6"
+      rvm --default use 2.7.6
   - init: |
-      rvm install 2.7.6
       yarn install
       gem install bundler:2.3.15
       bundle install
