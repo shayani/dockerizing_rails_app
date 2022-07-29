@@ -8,6 +8,10 @@ tasks:
       yarn install
       gem install bundler:2.3.15
       bundle install
+      docker run -d --rm -e POSTGRES_PASSWORD=postgres -p 5432:5432 postgres
+      bundle exec rails db:reset
+      bundle exec rails db:migrate
+      bundle exec rails db:seed
     command: bin/rails server
 
 vscode:
