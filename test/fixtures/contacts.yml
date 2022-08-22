@@ -1,6 +1,6 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-fernando:
+one:
   name: Fernando Shayani
   age: 44
   phone: +55 (83) 555-1234
@@ -11,3 +11,4 @@ John:
   age: 35
   phone: +1 (212) 555-4321
   address: One Ocean Parkway
+
