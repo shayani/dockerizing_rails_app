@@ -6,6 +6,10 @@ services:
       context: ./
     ports:
      - 3000:3000
+    environment:
+      - DB_HOST=db
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=postgres
 
   db:
     image: postgres:14
