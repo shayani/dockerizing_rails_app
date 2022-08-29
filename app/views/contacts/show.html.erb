@@ -1,9 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
+<h1>
   <%= @contact.name %>
-</p>
+</h1>
 
 <p>
   <strong>Age:</strong>
@@ -20,5 +19,5 @@
   <%= @contact.address %>
 </p>
 
-<%= link_to 'Edit', edit_contact_path(@contact) %> |
-<%= link_to 'Back', contacts_path %>
+<%= link_to 'Edit', edit_contact_path(@contact), class: "btn btn--yellow" %>
+<%= link_to 'Back', contacts_path, class: "btn btn--gray" %>
