@@ -1,23 +1,24 @@
-version: '3.8'
-
 services:
   app:
-    build:
-      context: ./
+    image: fshayani/dockerizing_rails_application:latest
     ports:
      - 3000:3000
     environment:
       - DB_HOST=db
       - DB_USERNAME=postgres
       - DB_PASSWORD=postgres
+      - RAILS_ENV=production
+      - RAILS_SERVE_STATIC_FILES=true
+      - RAILS_LOG_TO_STDOUT=true
+      - RAILS_MASTER_KEY=my_ultra_top_secret_master_key!!
+    depends_on:
+      - db
 
   db:
     image: postgres:14
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
-    ports:
-      - 5432:5432
     volumes:
       - postgres:/var/lib/postgresql/data
 
