@@ -1,3 +1,5 @@
+# These files and folders will not be copied to the container when building it.
+
 node_modules/
 log/
 tmp/

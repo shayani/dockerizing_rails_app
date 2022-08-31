@@ -3,9 +3,13 @@ default: &default
   port: 5432
   pool: 5
   timeout: 5000
+
+  # Tradicional localhost setup database configuration
   # host: localhost
   # username: postgres
   # password: postgres
+
+  # Database configuration with environment variables
   host: <%= ENV['DB_HOST'] || 'localhost' %>
   username: <%= ENV['DB_USERNAME'] || 'postgres' %>
   password: <%= ENV['DB_PASSWORD'] || 'postgres' %>
